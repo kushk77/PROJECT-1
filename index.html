@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Homestay</title>
+
+  <!-- ✅ Link External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">🏡 Our Homestay</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Slideshow -->
+<section id="home" class="hero">
+  <img src="drawing room.jpg" class="active" alt="Drawing Room">
+  <img src="IMG_2135.JPG" alt="Bedroom 1">
+  <img src="IMG_2136.JPG" alt="Bedroom 2">
+  <img src="IMG_2138.JPG" alt="Living Area">
+  <img src="IMG_2139.JPG" alt="Balcony View">
+  <img src="FF.jpg" alt="Garden Cottage">
+  <img src="flat.jpg" alt="Family Room">
+  <img src="flat1.jpg" alt="Flat Interior">
+
+  <div class="hero-text">
+    <h1>Welcome to Our Homestay</h1>
+    <p>Relax • Recharge • Reconnect</p>
+    <a href="#contact" class="btn">Book Now</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Our Homestay</h2>
+      <p>Our homestay offers cozy rooms, scenic views, and warm hospitality — perfect for families, couples, and solo travelers.</p>
+      <ul>
+        <li>Cozy, well-furnished rooms</li>
+        <li>Warm and personalized hospitality</li>
+        <li>Scenic views and peaceful surroundings</li>
+        <li>Perfect for families, couples & solo travelers</li>
+      </ul>
+      <a href="#rooms" class="btn">Explore Our Rooms</a>
+    </div>
+    <div class="about-image">
+      <img src="IMG_2138.JPG" alt="Homestay View">
+    </div>
+  </div>
+</section>
+
+<!-- Rooms Section -->
+<section id="rooms" class="section rooms-section">
+  <h2>Our Rooms</h2>
+  <div class="rooms-grid">
+    <div class="room-card">
+      <img src="drawing room.jpg" alt="Deluxe Room">
+      <div class="room-content">
+        <h3>Deluxe Room</h3>
+        <p>Spacious and elegant with all modern amenities.</p>
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="IMG_2151.jpg" alt="Family Room">
+      <div class="room-content">
+        <h3>Family Room</h3>
+        <p>Perfect for families and groups, cozy and comfortable.</p>
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="FF.jpg" alt="Garden Cottage">
+      <div class="room-content">
+        <h3>Garden Cottage</h3>
+        <p>Private cottage surrounded by lush greenery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section gallery-section">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="drawing room.jpg" alt="Drawing Room"></div>
+    <div class="gallery-item"><img src="IMG_2135.JPG" alt="Bedroom 1"></div>
+    <div class="gallery-item"><img src="IMG_20250627_192003.JPG" alt="Bedroom 2"></div>
+    <div class="gallery-item"><img src="IMG_2174.JPG" alt="Living Area"></div>
+    <div class="gallery-item"><img src="IMG_2139.JPG" alt="Balcony View"></div>
+    <div class="gallery-item"><img src="IMG_20250621_091023.jpg" alt="Garden Cottage"></div>
+    <div class="gallery-item"><img src="IMG_20250620_194007.jpg" alt="Family Room"></div>
+    <div class="gallery-item"><img src="IMG_20250627_192019.jpg" alt="Flat Interior"></div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact-section">
+  <h2>Contact Us</h2>
+  <p>📍 Hilltop Village, Himachal Pradesh</p>
+  <p>📞 +91 98765 43210</p>
+  <p>📧 ourhomestay@gmail.com</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <input type="hidden" name="access_key" value="563e50bd-594f-4689-ba80-432bad2179b6">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Our Homestay | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
