@@ -21,6 +21,7 @@
     <a href="#rooms">Rooms</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
   </nav>
 </header>
 
@@ -31,7 +32,7 @@
   <img src="IMG_2136.JPG" alt="Bedroom 2">
   <img src="IMG_2138.JPG" alt="Living Area">
   <img src="IMG_2139.JPG" alt="Balcony View">
-  <img src="FF.jpg" alt="Garden Cottage">
+  <img src="FF.jpg" alt="Modern Apartment">
   <img src="flat.jpg" alt="Family Room">
   <img src="flat1.jpg" alt="Flat Interior">
 
@@ -69,22 +70,22 @@
     <div class="room-card">
       <img src="drawing room.jpg" alt="Deluxe Room">
       <div class="room-content">
-        <h3>Deluxe Room</h3>
-        <p>Spacious and elegant with all modern amenities.</p>
+        <h3>🛋️ Deluxe Room</h3>
+        <p>Stay in style with modern comforts and a touch of luxury.</p>
       </div>
     </div>
     <div class="room-card">
       <img src="IMG_2151.jpg" alt="Family Room">
       <div class="room-content">
-        <h3>Family Room</h3>
-        <p>Perfect for families and groups, cozy and comfortable.</p>
+        <h3>🛏️ Family Room</h3>
+        <p>Cozy, spacious, and perfect for your family getaway.</p>
       </div>
     </div>
     <div class="room-card">
-      <img src="FF.jpg" alt="Garden Cottage">
+      <img src="FF.jpg" alt="Modern Apartment">
       <div class="room-content">
-        <h3>Garden Cottage</h3>
-        <p>Private cottage surrounded by lush greenery.</p>
+        <h3>🏠 Modern Apartment</h3>
+        <p>A stylish multi-storey stay with all essentials at your doorstep.</p>
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@
     <div class="gallery-item"><img src="IMG_20250627_192003.JPG" alt="Bedroom 2"></div>
     <div class="gallery-item"><img src="IMG_2174.JPG" alt="Living Area"></div>
     <div class="gallery-item"><img src="IMG_2139.JPG" alt="Balcony View"></div>
-    <div class="gallery-item"><img src="IMG_20250621_091023.jpg" alt="Garden Cottage"></div>
+    <div class="gallery-item"><img src="IMG_20250621_091023.jpg" alt="Modern Apartment"></div>
     <div class="gallery-item"><img src="IMG_20250620_194007.jpg" alt="Family Room"></div>
     <div class="gallery-item"><img src="IMG_20250627_192019.jpg" alt="Flat Interior"></div>
   </div>
@@ -109,11 +110,30 @@
 <section id="contact" class="section contact-section">
   <h2>Contact Us</h2>
   <p>📍 Hilltop Village, Himachal Pradesh</p>
-  <p>📞 +91 98765 43210</p>
-  <p>📧 ourhomestay@gmail.com</p>
+
+  <!-- ✅ Clickable & Copyable Phone Number -->
+  <p>
+    📞 
+    <a href="tel:+919876543210" 
+       id="phoneNumber" 
+       style="color:#000; text-decoration:none; cursor:pointer;">
+       +91 98765 43210
+    </a>
+    <button onclick="copyPhoneNumber()" 
+            style="margin-left:8px; padding:4px 10px; border:none; background:#4CAF50; color:#fff; border-radius:5px; cursor:pointer;">
+      📋 Copy
+    </button>
+  </p>
+
+  <!-- ✅ Clickable Email -->
+  <p>📧 
+    <a href="mailto:ourhomestay@gmail.com" style="color:#000; text-decoration:none;">
+      ourhomestay@gmail.com
+    </a>
+  </p>
 
   <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-    <input type="hidden" name="access_key" value="563e50bd-594f-4689-ba80-432bad2179b6">
+    <input type="hidden" name="access_key" value="7f4752d4-2566-449f-83df-6c9cee97bd88">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -122,11 +142,27 @@
   </form>
 </section>
 
+<!-- ✅ Location Section -->
+<section id="location" class="section location-section">
+  <h2>Find Us</h2>
+  <p>📍 Visit us at Hare Krishna Homestay, Mathura — nestled in the peaceful surroundings of Vrindavan.</p>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.6553635995274!2d77.6630599755027!3d27.51109167629557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397371002dd79d3d%3A0xadcb73ca92ca17a8!2sHare%20Krishna%20Homestay!5e0!3m2!1sen!2sin!4v1762516000970!5m2!1sen!2sin" 
+      width="100%" height="450" 
+      style="border:0; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1);" 
+      allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
 <footer>
   <p>© 2025 Our Homestay | All Rights Reserved</p>
 </footer>
 
 <!-- ✅ External JavaScript -->
 <script src="script.js"></script>
+
 </body>
 </html>
