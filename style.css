@@ -77,6 +77,23 @@ form button { background:#ffd369; border:none; padding:12px; border-radius:8px; 
 form button:hover { background:#e9b949; }
 #form-status { margin-top:10px; font-weight:bold; }
 
+/* Location Section */
+.location-section {
+  text-align: center;
+  background: #fffbea;
+}
+.location-section p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.1rem;
+}
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 footer { background:#333; color:white; text-align:center; padding:20px; }
 
 @media(max-width:768px) { 
