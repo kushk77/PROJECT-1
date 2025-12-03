@@ -9,7 +9,7 @@ if (slides.length > 0) {
   }, 4000);
 }
 
-// ✅ Web3Forms Submission
+// ✅ Web3Forms Submission (unchanged)
 const form = document.getElementById('contactForm');
 const status = document.getElementById('form-status');
 
@@ -31,6 +31,39 @@ if (form) {
       status.style.color = 'red';
       status.textContent = '❌ Failed to send message. Please try again.';
       console.error(err);
+    }
+  });
+}
+
+// ✅ Hamburger Menu (added for mobile)
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+
+    // Optional: toggle between ☰ and ✖ icon
+    if (navMenu.classList.contains('show')) {
+      hamburger.textContent = '✖';
+    } else {
+      hamburger.textContent = '☰';
+    }
+  });
+
+  // Close menu when a link is clicked (mobile)
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+      hamburger.textContent = '☰';
+    });
+  });
+
+  // Close menu when clicking outside (optional)
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove('show');
+      hamburger.textContent = '☰';
     }
   });
 }
