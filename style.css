@@ -1,4 +1,5 @@
 * { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; max-width:100%; overflow-x:hidden; } /* ✅ Fix right scroll */
 body { font-family:"Poppins", sans-serif; background:#fafafa; color:#333; }
 a { text-decoration:none; color:inherit; }
 html { scroll-behavior: smooth; }
@@ -12,6 +13,33 @@ header {
 header .logo { font-size:1.5rem; font-weight:bold; }
 header nav a { margin-left:20px; font-weight:500; transition:color 0.3s; }
 header nav a:hover { color:#ffd369; }
+
+/* ✅ Hamburger */
+.hamburger {
+  display:none;
+  font-size:2rem;
+  color:#fff;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* ✅ Mobile Nav */
+@media (max-width:768px) {
+  .hamburger { display:block; }
+  header nav {
+    position:fixed;
+    top:70px;
+    right:-100%;
+    background:rgba(0,0,0,0.9);
+    flex-direction:column;
+    width:200px;
+    padding:20px;
+    border-radius:10px;
+    transition:right 0.3s ease-in-out;
+  }
+  header nav.show { right:10px; }
+  header nav a { color:#fff; margin:10px 0; display:block; }
+}
 
 /* Hero */
 .hero { position:relative; height:100vh; overflow:hidden; display:flex; align-items:center; justify-content:center; }
@@ -87,6 +115,25 @@ form button:hover { background:#e9b949; }
 
 footer { background:#333; color:white; text-align:center; padding:20px; }
 
+/* ✅ Floating Phone Button */
+.phone-float {
+  position:fixed;
+  bottom:90px;
+  left:20px;
+  background:#007BFF;
+  border-radius:50%;
+  width:55px;
+  height:55px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  z-index:1000;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.phone-float img { width:28px; height:28px; filter:invert(1); }
+.phone-float:hover { transform:scale(1.1); box-shadow:0 6px 15px rgba(0,0,0,0.4); }
+
 /* ✅ WhatsApp Floating Button */
 .whatsapp-float {
   position:fixed;
@@ -113,8 +160,10 @@ footer { background:#333; color:white; text-align:center; padding:20px; }
   100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
 }
 
+/* ✅ Responsive */
 @media(max-width:768px){
   .hero-text h1{ font-size:2rem; } 
   .hero-text p{ font-size:1rem; } 
   .about-container { flex-direction:column; }
+  .section { padding:40px 5%; }
 }
