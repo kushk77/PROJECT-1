@@ -131,7 +131,11 @@ footer { background:#333; color:white; text-align:center; padding:20px; }
   z-index:1000;
   transition:transform 0.3s, box-shadow 0.3s;
 }
-.phone-float img { width:28px; height:28px; filter:invert(1); }
+.phone-float img { 
+  width:28px; 
+  height:28px; 
+  filter:none;   /* ✅ removes orange tint */
+}
 .phone-float:hover { transform:scale(1.1); box-shadow:0 6px 15px rgba(0,0,0,0.4); }
 
 /* ✅ WhatsApp Floating Button */
